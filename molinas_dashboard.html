@@ -16,46 +16,62 @@
       transition: background-color 0.2s ease, color 0.2s ease;
     }
 
-    /* Light Theme (Default) */
+    /* MoLiNas Palette Tokens:
+       Ink Black:      #03071E
+       Night Bordeaux: #370617
+       Black Cherry:   #6A040F
+       Oxblood:        #9D0208
+       Brick Ember:    #D00000
+       Red Ochre:      #DC2F02
+       Cayenne Red:    #E85D04
+    */
+
+    /* Light Theme (Clean Warm Ivory Paper with Palette Accents) */
     html:not(.dark) {
-      --bg-body: #f8fafc;
+      --bg-body: #fdf8f7;
       --bg-sidebar: #ffffff;
       --bg-card: #ffffff;
-      --border-ui: #e2e8f0;
-      --text-main: #0f172a;
-      --text-secondary: #334155;
-      --text-muted: #64748b;
-      --table-header: #f1f5f9;
-      --table-row-hover: #f8fafc;
-      --table-border: #e2e8f0;
-      --nav-active-bg: #e0f2fe;
-      --nav-active-text: #0369a1;
-      --nav-active-border: #0284c7;
+      --border-ui: #ebd6d4;
+      --text-main: #03071E;
+      --text-secondary: #370617;
+      --text-muted: #82434b;
+      --table-header: #faecea;
+      --table-row-hover: #f7e1de;
+      --table-border: #ebd6d4;
+      --nav-active-bg: #faecea;
+      --nav-active-text: #9D0208;
+      --nav-active-border: #D00000;
       --input-bg: #ffffff;
-      --input-border: #cbd5e1;
-      --brand-blue: #004b87;
-      --brand-blue-hover: #003865;
+      --input-border: #dcb8b4;
+      --brand-primary: #9D0208;
+      --brand-primary-hover: #6A040F;
+      --brand-accent: #DC2F02;
+      --brand-ember: #D00000;
+      --brand-cayenne: #E85D04;
     }
 
-    /* Dark Theme */
+    /* Dark Theme (Pure Palette: Ink Black, Night Bordeaux, Black Cherry, Oxblood, Cayenne) */
     html.dark {
-      --bg-body: #0b0f17;
-      --bg-sidebar: #0f1422;
-      --bg-card: #131927;
-      --border-ui: #1e293b;
-      --text-main: #f8fafc;
-      --text-secondary: #cbd5e1;
-      --text-muted: #94a3b8;
-      --table-header: #111726;
-      --table-row-hover: #172032;
-      --table-border: #1e293b;
-      --nav-active-bg: #1e293b;
-      --nav-active-text: #38bdf8;
-      --nav-active-border: #38bdf8;
-      --input-bg: #0f172a;
-      --input-border: #334155;
-      --brand-blue: #2563eb;
-      --brand-blue-hover: #1d4ed8;
+      --bg-body: #03071E;
+      --bg-sidebar: #090310;
+      --bg-card: #12040d;
+      --border-ui: #370617;
+      --text-main: #fcf4f5;
+      --text-secondary: #e2cad0;
+      --text-muted: #a67680;
+      --table-header: #1b0512;
+      --table-row-hover: #260617;
+      --table-border: #370617;
+      --nav-active-bg: #370617;
+      --nav-active-text: #E85D04;
+      --nav-active-border: #DC2F02;
+      --input-bg: #090310;
+      --input-border: #370617;
+      --brand-primary: #9D0208;
+      --brand-primary-hover: #D00000;
+      --brand-accent: #DC2F02;
+      --brand-ember: #D00000;
+      --brand-cayenne: #E85D04;
     }
 
     /* Custom Scrollbar */
@@ -67,11 +83,11 @@
       background: transparent;
     }
     ::-webkit-scrollbar-thumb {
-      background: #cbd5e1;
+      background: #ebd6d4;
       border-radius: 4px;
     }
     html.dark ::-webkit-scrollbar-thumb {
-      background: #334155;
+      background: #370617;
     }
 
     .ui-card {
@@ -104,7 +120,7 @@
       border-left-color: var(--nav-active-border);
     }
 
-    /* Sidebar Counters / Badges with Guaranteed High Contrast in Both Modes */
+    /* Sidebar Counters / Badges with High Contrast in Both Modes */
     .sidebar-badge {
       font-size: 11px;
       font-weight: 700;
@@ -119,55 +135,55 @@
 
     /* Light Theme Badges - Inactive State */
     html:not(.dark) .sidebar-badge-neutral {
-      background-color: #e2e8f0;
-      color: #0f172a;
-      border: 1px solid #cbd5e1;
+      background-color: #ebd6d4;
+      color: #03071E;
+      border: 1px solid #dcb8b4;
     }
     html:not(.dark) .sidebar-badge-blue {
-      background-color: #dbeafe;
-      color: #1e40af;
-      border: 1px solid #93c5fd;
+      background-color: #faecea;
+      color: #9D0208;
+      border: 1px solid #f2bdb5;
     }
     html:not(.dark) .sidebar-badge-green {
-      background-color: #dcfce7;
-      color: #15803d;
-      border: 1px solid #86efac;
+      background-color: #faecea;
+      color: #DC2F02;
+      border: 1px solid #f2bdb5;
     }
 
-    /* Light Theme Badges - ACTIVE State (Parent is .sidebar-btn.active) */
+    /* Light Theme Badges - ACTIVE State */
     html:not(.dark) .sidebar-btn.active .sidebar-badge-neutral,
     html:not(.dark) .sidebar-btn.active .sidebar-badge-blue,
     html:not(.dark) .sidebar-btn.active .sidebar-badge-green {
-      background-color: #004b87 !important;
+      background-color: #9D0208 !important;
       color: #ffffff !important;
-      border-color: #004b87 !important;
+      border-color: #9D0208 !important;
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     }
 
     /* Dark Theme Badges - Inactive State */
     html.dark .sidebar-badge-neutral {
-      background-color: #1e293b;
-      color: #f8fafc;
-      border: 1px solid #334155;
+      background-color: #370617;
+      color: #fcf4f5;
+      border: 1px solid #6A040F;
     }
     html.dark .sidebar-badge-blue {
-      background-color: #1e3a8a;
-      color: #bfdbfe;
-      border: 1px solid #2563eb;
+      background-color: #6A040F;
+      color: #ffd8a8;
+      border: 1px solid #9D0208;
     }
     html.dark .sidebar-badge-green {
-      background-color: #064e3b;
-      color: #a7f3d0;
-      border: 1px solid #059669;
+      background-color: #9D0208;
+      color: #ffe8d6;
+      border: 1px solid #DC2F02;
     }
 
     /* Dark Theme Badges - ACTIVE State */
     html.dark .sidebar-btn.active .sidebar-badge-neutral,
     html.dark .sidebar-btn.active .sidebar-badge-blue,
     html.dark .sidebar-btn.active .sidebar-badge-green {
-      background-color: #38bdf8 !important;
-      color: #0f172a !important;
-      border-color: #38bdf8 !important;
+      background-color: #E85D04 !important;
+      color: #03071E !important;
+      border-color: #E85D04 !important;
       font-weight: 800;
     }
 
@@ -189,7 +205,7 @@
     <div class="overflow-y-auto">
       <div class="p-4 border-b border-[var(--border-ui)] flex items-center justify-between">
         <div class="flex items-center gap-2.5">
-          <div class="w-8 h-8 rounded bg-[#004b87] dark:bg-blue-600 text-white flex items-center justify-center font-bold text-sm">
+          <div class="w-8 h-8 rounded bg-[#9D0208] dark:bg-[#D00000] text-white flex items-center justify-center font-bold text-sm shadow-sm">
             M
           </div>
           <div>
@@ -269,7 +285,7 @@
 
     <!-- Bottom Actions / User Info -->
     <div class="p-3 border-t border-[var(--border-ui)] space-y-2 bg-[var(--bg-sidebar)]">
-      <button onclick="openAddDataModal()" class="w-full py-2 px-3 rounded-lg bg-[#004b87] dark:bg-blue-600 hover:bg-[#003865] dark:hover:bg-blue-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm transition">
+      <button onclick="openAddDataModal()" class="w-full py-2 px-3 rounded-lg bg-[#9D0208] hover:bg-[#6A040F] dark:bg-[#9D0208] dark:hover:bg-[#D00000] text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm transition">
         <span>+ Tambah Data Baru</span>
       </button>
 
@@ -278,7 +294,7 @@
           <div class="font-bold text-[var(--text-main)] truncate">Sesi Terverifikasi</div>
           <div class="text-[11px] text-[var(--text-muted)] truncate">Authorized Executive</div>
         </div>
-        <button onclick="logoutUser()" class="text-[var(--text-muted)] hover:text-red-600 p-1 text-xs" title="Keluar / Logout">
+        <button onclick="logoutUser()" class="text-[var(--text-muted)] hover:text-[#D00000] p-1 text-xs font-semibold" title="Keluar / Logout">
           Keluar
         </button>
       </div>
@@ -303,7 +319,7 @@
       <!-- Quick Search Bar -->
       <div class="relative w-full max-w-sm">
         <input type="text" id="global-search-input" oninput="handleGlobalSearch(this.value)" placeholder="Cari partner, PIC, regulasi, berita..." 
-          class="w-full bg-[var(--input-bg)] border border-[var(--input-border)] focus:border-[#004b87] dark:focus:border-sky-400 rounded-lg pl-8 pr-12 py-1.5 text-xs text-[var(--text-main)] placeholder-[var(--text-muted)] outline-none transition">
+          class="w-full bg-[var(--input-bg)] border border-[var(--input-border)] focus:border-[#9D0208] dark:focus:border-[#E85D04] rounded-lg pl-8 pr-12 py-1.5 text-xs text-[var(--text-main)] placeholder-[var(--text-muted)] outline-none transition">
         <svg class="w-3.5 h-3.5 text-[var(--text-muted)] absolute left-2.5 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
         <span class="absolute right-2.5 top-1.5 text-[10px] text-[var(--text-muted)] bg-[var(--table-header)] px-1 rounded border border-[var(--border-ui)]">ESC</span>
       </div>
@@ -343,27 +359,27 @@
             <div class="text-[11px] text-[var(--text-secondary)] mt-1.5">14 P1 • 17 P2 • 1 P3</div>
           </div>
 
-          <div class="ui-card p-4 border-l-4 border-l-red-500">
+          <div class="ui-card p-4 border-l-4 border-l-[#D00000]">
             <div class="text-xs text-[var(--text-muted)] font-medium">P1 Gatekeepers</div>
-            <div class="text-2xl font-bold text-red-600 dark:text-red-400 mt-1" id="kpi-p1-count">14</div>
+            <div class="text-2xl font-bold text-[#D00000] dark:text-[#FF6B6B] mt-1" id="kpi-p1-count">14</div>
             <div class="text-[11px] text-[var(--text-secondary)] mt-1.5">Prasyarat Mutlak Target</div>
           </div>
 
-          <div class="ui-card p-4">
+          <div class="ui-card p-4 border-l-4 border-l-[#6A040F]">
             <div class="text-xs text-[var(--text-muted)] font-medium">Regulasi Lintas K/L</div>
             <div class="text-2xl font-bold text-[var(--text-main)] mt-1" id="kpi-reg-count">204</div>
             <div class="text-[11px] text-[var(--text-secondary)] mt-1.5">Perpres, Permen, SNI</div>
           </div>
 
-          <div class="ui-card p-4">
+          <div class="ui-card p-4 border-l-4 border-l-[#DC2F02]">
             <div class="text-xs text-[var(--text-muted)] font-medium">Berita & Intelijen</div>
             <div class="text-2xl font-bold text-[var(--text-main)] mt-1" id="kpi-news-count">130</div>
             <div class="text-[11px] text-[var(--text-secondary)] mt-1.5">57 MoLiNas • 42 Global</div>
           </div>
 
-          <div class="ui-card p-4 col-span-2 md:col-span-1">
+          <div class="ui-card p-4 col-span-2 md:col-span-1 border-l-4 border-l-[#E85D04]">
             <div class="text-xs text-[var(--text-muted)] font-medium">Kontak PIC Eksekutif</div>
-            <div class="text-2xl font-bold text-[#004b87] dark:text-sky-400 mt-1" id="kpi-pic-count">10</div>
+            <div class="text-2xl font-bold text-[#9D0208] dark:text-[#E85D04] mt-1" id="kpi-pic-count">10</div>
             <div class="text-[11px] text-[var(--text-secondary)] mt-1.5">Nomor Telepon & Email</div>
           </div>
         </div>
@@ -377,8 +393,8 @@
               <div class="flex items-center justify-between mb-1">
                 <h3 class="text-sm font-bold text-[var(--text-main)]">Matriks Scatter Plot: Criticality vs Urgency</h3>
                 <div class="flex items-center gap-3 text-xs">
-                  <span class="flex items-center gap-1 text-red-600 dark:text-red-400"><span class="w-2.5 h-2.5 rounded-full bg-red-500 inline-block"></span>P1 (Kritis)</span>
-                  <span class="flex items-center gap-1 text-blue-600 dark:text-blue-400"><span class="w-2.5 h-2.5 rounded-full bg-blue-500 inline-block"></span>P2 (Enabler)</span>
+                  <span class="flex items-center gap-1 text-[#D00000] dark:text-[#FF6B6B]"><span class="w-2.5 h-2.5 rounded-full bg-[#D00000] inline-block"></span>P1 (Kritis)</span>
+                  <span class="flex items-center gap-1 text-[#E85D04] dark:text-[#E85D04]"><span class="w-2.5 h-2.5 rounded-full bg-[#E85D04] inline-block"></span>P2 (Enabler)</span>
                 </div>
               </div>
               <p class="text-xs text-[var(--text-muted)] mb-3">Distribusi 32 mitra kerja berdasarkan tingkat kepentingan (Y) dan urgensi (X).</p>
@@ -386,7 +402,7 @@
               <div class="relative w-full h-64 bg-[var(--table-header)] border border-[var(--border-ui)] rounded-lg scatter-grid-bg p-3 flex flex-col justify-between overflow-hidden">
                 <div class="flex justify-between text-[11px] text-[var(--text-muted)] font-medium select-none">
                   <span>Kuadran 2 (Strategis Jangka Menengah)</span>
-                  <span class="text-red-600 dark:text-red-400 font-bold">Kuadran 1: P1 GATEKEEPER</span>
+                  <span class="text-[#D00000] dark:text-[#FF6B6B] font-bold">Kuadran 1: P1 GATEKEEPER</span>
                 </div>
                 
                 <div id="scatter-dots-layer" class="absolute inset-0 p-6 pointer-events-auto">
@@ -402,7 +418,7 @@
 
             <div class="mt-3 pt-2.5 border-t border-[var(--border-ui)] text-xs text-[var(--text-muted)] flex items-center justify-between">
               <span>Klik lingkaran titik untuk melihat berkas rincian stakeholder.</span>
-              <button onclick="navigateTo('stakeholders')" class="text-[#004b87] dark:text-sky-400 hover:underline font-bold">Lihat Tabel Lengkap →</button>
+              <button onclick="navigateTo('stakeholders')" class="text-[#9D0208] dark:text-[#E85D04] hover:underline font-bold">Lihat Tabel Lengkap →</button>
             </div>
           </div>
 
@@ -413,20 +429,20 @@
               <p class="text-xs text-[var(--text-muted)] mb-3">Pengelompokan bobot intervensi berdasarkan formula resmi.</p>
 
               <div class="space-y-2.5 text-xs">
-                <div class="p-3 rounded-lg border border-red-200 dark:border-red-900/40 bg-red-50/60 dark:bg-red-950/20 flex items-center justify-between">
+                <div class="p-3 rounded-lg border border-red-200 dark:border-[#6A040F] bg-red-50/60 dark:bg-[#370617]/40 flex items-center justify-between">
                   <div>
-                    <div class="font-bold text-red-700 dark:text-red-400">P1 Gatekeeper (Skor &ge; 4.0)</div>
+                    <div class="font-bold text-[#9D0208] dark:text-[#FF6B6B]">P1 Gatekeeper (Skor &ge; 4.0)</div>
                     <div class="text-[11px] text-[var(--text-secondary)] mt-0.5">IBC, BRIN, GESITS, ALVA, Kemenperin, PLN</div>
                   </div>
-                  <div class="text-right font-bold text-red-700 dark:text-red-400 text-sm">14 Lembaga</div>
+                  <div class="text-right font-bold text-[#9D0208] dark:text-[#FF6B6B] text-sm">14 Lembaga</div>
                 </div>
 
-                <div class="p-3 rounded-lg border border-blue-200 dark:border-blue-900/40 bg-blue-50/60 dark:bg-blue-950/20 flex items-center justify-between">
+                <div class="p-3 rounded-lg border border-orange-200 dark:border-[#9D0208]/60 bg-orange-50/60 dark:bg-[#2b0808]/40 flex items-center justify-between">
                   <div>
-                    <div class="font-bold text-blue-700 dark:text-blue-400">P2 Scale Enabler (3.0 – 3.95)</div>
+                    <div class="font-bold text-[#DC2F02] dark:text-[#E85D04]">P2 Scale Enabler (3.0 – 3.95)</div>
                     <div class="text-[11px] text-[var(--text-secondary)] mt-0.5">BKPM, Kemenkeu, Bappenas, Adyawinsa, ATMI</div>
                   </div>
-                  <div class="text-right font-bold text-blue-700 dark:text-blue-400 text-sm">17 Lembaga</div>
+                  <div class="text-right font-bold text-[#DC2F02] dark:text-[#E85D04] text-sm">17 Lembaga</div>
                 </div>
 
                 <div class="p-3 rounded-lg border border-[var(--border-ui)] bg-[var(--table-header)] flex items-center justify-between">
@@ -460,7 +476,7 @@
             <div>
               <div class="flex items-center justify-between mb-1">
                 <h3 class="text-sm font-bold text-[var(--text-main)]">Direktori Kontak Cepat</h3>
-                <button onclick="navigateTo('contacts')" class="text-xs text-[#004b87] dark:text-sky-400 hover:underline font-medium">Buka Semua →</button>
+                <button onclick="navigateTo('contacts')" class="text-xs text-[#9D0208] dark:text-[#E85D04] hover:underline font-medium">Buka Semua →</button>
               </div>
               <p class="text-xs text-[var(--text-muted)] mb-3">PIC kunci pemangku kepentingan industri (Adyawinsa, ATMI, IBC, Pindad, APPI, dll.).</p>
               
@@ -471,7 +487,7 @@
 
             <div class="pt-3 border-t border-[var(--border-ui)] text-xs text-[var(--text-muted)] flex items-center justify-between">
               <span>Gunakan tombol untuk mengirim email atau menyalin nomor.</span>
-              <button onclick="openAddDataModal('contact')" class="text-[#004b87] dark:text-sky-400 font-bold hover:underline">+ Tambah PIC Baru</button>
+              <button onclick="openAddDataModal('contact')" class="text-[#9D0208] dark:text-[#E85D04] font-bold hover:underline">+ Tambah PIC Baru</button>
             </div>
           </div>
 
@@ -487,13 +503,13 @@
         <div class="ui-card p-4 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div class="flex items-center gap-1.5 flex-wrap text-xs">
             <span class="text-[var(--text-muted)] font-medium">Filter Prioritas:</span>
-            <button onclick="filterShPriority('ALL')" id="sh-btn-all" class="px-2.5 py-1 rounded bg-blue-100 dark:bg-blue-900/60 text-blue-800 dark:text-blue-200 font-bold border border-blue-300 dark:border-blue-700">Semua (32)</button>
+            <button onclick="filterShPriority('ALL')" id="sh-btn-all" class="px-2.5 py-1 rounded bg-[#faecea] dark:bg-[#370617] text-[#9D0208] dark:text-[#E85D04] font-bold border border-[#dcb8b4] dark:border-[#6A040F]">Semua (32)</button>
             <button onclick="filterShPriority('P1')" id="sh-btn-p1" class="px-2.5 py-1 rounded bg-[var(--table-header)] text-[var(--text-secondary)] hover:text-[var(--text-main)] border border-[var(--border-ui)]">P1 Gatekeeper (14)</button>
             <button onclick="filterShPriority('P2')" id="sh-btn-p2" class="px-2.5 py-1 rounded bg-[var(--table-header)] text-[var(--text-secondary)] hover:text-[var(--text-main)] border border-[var(--border-ui)]">P2 Scale Enabler (17)</button>
             <button onclick="filterShPriority('P3')" id="sh-btn-p3" class="px-2.5 py-1 rounded bg-[var(--table-header)] text-[var(--text-secondary)] hover:text-[var(--text-main)] border border-[var(--border-ui)]">P3 Support (1)</button>
           </div>
 
-          <button onclick="openAddDataModal('stakeholder')" class="px-3.5 py-1.5 rounded bg-[#004b87] dark:bg-blue-600 hover:bg-[#003865] text-white text-xs font-bold transition">
+          <button onclick="openAddDataModal('stakeholder')" class="px-3.5 py-1.5 rounded bg-[#9D0208] hover:bg-[#6A040F] dark:bg-[#9D0208] dark:hover:bg-[#D00000] text-white text-xs font-bold transition">
             + Tambah Partner Baru
           </button>
         </div>
@@ -534,7 +550,7 @@
             <p class="text-xs text-[var(--text-muted)]">Data kontak resmi pemangku kepentingan ekosistem MoLiNas.</p>
           </div>
           <div class="flex items-center gap-2">
-            <button onclick="openAddDataModal('contact')" class="px-3.5 py-1.5 rounded bg-[#004b87] dark:bg-blue-600 hover:bg-[#003865] text-white text-xs font-bold transition">
+            <button onclick="openAddDataModal('contact')" class="px-3.5 py-1.5 rounded bg-[#9D0208] hover:bg-[#6A040F] dark:bg-[#9D0208] dark:hover:bg-[#D00000] text-white text-xs font-bold transition">
               + Tambah Kontak Baru
             </button>
             <button onclick="copyAllContactsText()" id="btn-copy-all-contacts" class="px-3 py-1.5 rounded border border-[var(--border-ui)] bg-[var(--bg-card)] text-xs text-[var(--text-secondary)] hover:text-[var(--text-main)] transition">
@@ -554,7 +570,7 @@
       <!-- ============================================== -->
       <section id="view-supply-chain" class="hidden space-y-4">
         
-        <div class="ui-card p-4 border-l-4 border-l-[#004b87] dark:border-l-blue-500">
+        <div class="ui-card p-4 border-l-4 border-l-[#9D0208] dark:border-l-[#DC2F02]">
           <h2 class="text-sm font-bold text-[var(--text-main)]">Peta Rantai Pasok Industri MoLiNas (Supply Chain Network)</h2>
           <p class="text-xs text-[var(--text-muted)] mt-0.5">Integrasi hulu mineral, komponen midstream, perakitan OEM, serta infrastruktur pengisian dan pasar hilir.</p>
         </div>
@@ -655,7 +671,7 @@
       <!-- VIEW 5: USULAN PERPRES                         -->
       <!-- ============================================== -->
       <section id="view-usulan" class="hidden space-y-4">
-        <div class="ui-card p-4 border-l-4 border-l-[#004b87] dark:border-l-blue-500">
+        <div class="ui-card p-4 border-l-4 border-l-[#9D0208] dark:border-l-[#DC2F02]">
           <h2 class="text-sm font-bold text-[var(--text-main)]">Matriks Usulan Penyempurnaan Perpres (12 Area Strategis)</h2>
           <p class="text-xs text-[var(--text-muted)] mt-0.5">Analisis komparatif Perpres 55/2019 dan Perpres 79/2023 menuju kerangka regulasi 2026–2035.</p>
         </div>
@@ -676,7 +692,7 @@
               <option value="ALL">Semua Instansi (204 Regulasi)</option>
             </select>
           </div>
-          <button onclick="openAddDataModal('regulation')" class="px-3.5 py-1.5 rounded bg-[#004b87] dark:bg-blue-600 hover:bg-[#003865] text-white text-xs font-bold transition">
+          <button onclick="openAddDataModal('regulation')" class="px-3.5 py-1.5 rounded bg-[#9D0208] hover:bg-[#6A040F] dark:bg-[#9D0208] dark:hover:bg-[#D00000] text-white text-xs font-bold transition">
             + Tambah Regulasi Baru
           </button>
         </div>
@@ -709,12 +725,12 @@
         <div class="ui-card p-4 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div class="flex items-center gap-1.5 flex-wrap text-xs">
             <span class="text-[var(--text-muted)] font-medium">Segmen:</span>
-            <button onclick="filterNewsSegment('ALL')" id="news-tab-all" class="px-2.5 py-1 rounded bg-blue-100 dark:bg-blue-900/60 text-blue-800 dark:text-blue-200 font-bold border border-blue-300 dark:border-blue-700">Semua (130)</button>
+            <button onclick="filterNewsSegment('ALL')" id="news-tab-all" class="px-2.5 py-1 rounded bg-[#faecea] dark:bg-[#370617] text-[#9D0208] dark:text-[#E85D04] font-bold border border-[#dcb8b4] dark:border-[#6A040F]">Semua (130)</button>
             <button onclick="filterNewsSegment('MoLiNas')" id="news-tab-molinas" class="px-2.5 py-1 rounded bg-[var(--table-header)] text-[var(--text-secondary)] hover:text-[var(--text-main)] border border-[var(--border-ui)]">MoLiNas Strategic (57)</button>
             <button onclick="filterNewsSegment('Global')" id="news-tab-global" class="px-2.5 py-1 rounded bg-[var(--table-header)] text-[var(--text-secondary)] hover:text-[var(--text-main)] border border-[var(--border-ui)]">Global Market (42)</button>
             <button onclick="filterNewsSegment('Lokal')" id="news-tab-lokal" class="px-2.5 py-1 rounded bg-[var(--table-header)] text-[var(--text-secondary)] hover:text-[var(--text-main)] border border-[var(--border-ui)]">Lokal Indonesia (31)</button>
           </div>
-          <button onclick="openAddDataModal('news')" class="px-3.5 py-1.5 rounded bg-[#004b87] dark:bg-blue-600 hover:bg-[#003865] text-white text-xs font-bold transition">
+          <button onclick="openAddDataModal('news')" class="px-3.5 py-1.5 rounded bg-[#9D0208] hover:bg-[#6A040F] dark:bg-[#9D0208] dark:hover:bg-[#D00000] text-white text-xs font-bold transition">
             + Tambah Berita Baru
           </button>
         </div>
@@ -739,7 +755,7 @@
 
           <div id="ai-chat-messages" class="flex-1 overflow-y-auto py-3 space-y-3 pr-2 text-xs">
             <div class="flex items-start gap-2.5">
-              <div class="w-7 h-7 rounded bg-[#004b87] text-white flex items-center justify-center font-bold text-xs shrink-0">
+              <div class="w-7 h-7 rounded bg-[#9D0208] text-white flex items-center justify-center font-bold text-xs shrink-0 shadow-xs">
                 AI
               </div>
               <div class="p-3 rounded-lg bg-[var(--table-header)] border border-[var(--border-ui)] text-[var(--text-main)] max-w-xl space-y-1.5 leading-relaxed">
@@ -767,8 +783,8 @@
 
           <div class="pt-2.5 border-t border-[var(--border-ui)] flex items-center gap-2">
             <input type="text" id="ai-input" onkeydown="if(event.key==='Enter') sendAiMessage()" placeholder="Ketik pertanyaan terkait data MoLiNas..."
-              class="flex-1 bg-[var(--input-bg)] border border-[var(--input-border)] focus:border-[#004b87] rounded-lg px-3 py-2 text-xs text-[var(--text-main)] outline-none">
-            <button onclick="sendAiMessage()" class="px-4 py-2 rounded-lg bg-[#004b87] dark:bg-blue-600 hover:bg-[#003865] text-white text-xs font-bold transition">
+              class="flex-1 bg-[var(--input-bg)] border border-[var(--input-border)] focus:border-[#9D0208] dark:focus:border-[#E85D04] rounded-lg px-3 py-2 text-xs text-[var(--text-main)] outline-none">
+            <button onclick="sendAiMessage()" class="px-4 py-2 rounded-lg bg-[#9D0208] hover:bg-[#6A040F] dark:bg-[#9D0208] dark:hover:bg-[#D00000] text-white text-xs font-bold transition">
               Kirim
             </button>
           </div>
@@ -793,7 +809,7 @@
 
       <!-- Tab switcher -->
       <div class="flex items-center gap-2 border-b border-[var(--border-ui)] pb-2 text-xs">
-        <button onclick="switchAddTab('contact')" id="tab-add-contact" class="px-2.5 py-1 rounded font-bold bg-[#004b87] text-white">Kontak PIC</button>
+        <button onclick="switchAddTab('contact')" id="tab-add-contact" class="px-2.5 py-1 rounded font-bold bg-[#9D0208] text-white">Kontak PIC</button>
         <button onclick="switchAddTab('stakeholder')" id="tab-add-stakeholder" class="px-2.5 py-1 rounded text-[var(--text-secondary)] hover:text-[var(--text-main)]">Stakeholder</button>
         <button onclick="switchAddTab('news')" id="tab-add-news" class="px-2.5 py-1 rounded text-[var(--text-secondary)] hover:text-[var(--text-main)]">Berita</button>
         <button onclick="switchAddTab('regulation')" id="tab-add-regulation" class="px-2.5 py-1 rounded text-[var(--text-secondary)] hover:text-[var(--text-main)]">Regulasi</button>
@@ -831,7 +847,7 @@
         </div>
         <div class="flex justify-end gap-2 pt-2">
           <button type="button" onclick="closeAddDataModal()" class="px-3.5 py-1.5 bg-gray-200 dark:bg-gray-800 text-[var(--text-secondary)] rounded">Batal</button>
-          <button type="submit" class="px-4 py-1.5 bg-[#004b87] dark:bg-blue-600 hover:bg-[#003865] text-white font-bold rounded">Simpan</button>
+          <button type="submit" class="px-4 py-1.5 bg-[#9D0208] hover:bg-[#6A040F] dark:bg-[#9D0208] dark:hover:bg-[#D00000] text-white font-bold rounded">Simpan</button>
         </div>
       </form>
 
@@ -891,7 +907,7 @@
         </div>
         <div class="flex justify-end gap-2 pt-2">
           <button type="button" onclick="closeAddDataModal()" class="px-3.5 py-1.5 bg-gray-200 dark:bg-gray-800 text-[var(--text-secondary)] rounded">Batal</button>
-          <button type="submit" class="px-4 py-1.5 bg-[#004b87] dark:bg-blue-600 hover:bg-[#003865] text-white font-bold rounded">Simpan</button>
+          <button type="submit" class="px-4 py-1.5 bg-[#9D0208] hover:bg-[#6A040F] dark:bg-[#9D0208] dark:hover:bg-[#D00000] text-white font-bold rounded">Simpan</button>
         </div>
       </form>
 
@@ -950,7 +966,7 @@
 
         <div class="flex justify-end gap-2 pt-2">
           <button type="button" onclick="closeAddDataModal()" class="px-3.5 py-1.5 bg-gray-200 dark:bg-gray-800 text-[var(--text-secondary)] rounded">Batal</button>
-          <button type="submit" class="px-4 py-1.5 bg-[#004b87] dark:bg-blue-600 hover:bg-[#003865] text-white font-bold rounded">Simpan Berita</button>
+          <button type="submit" class="px-4 py-1.5 bg-[#9D0208] hover:bg-[#6A040F] dark:bg-[#9D0208] dark:hover:bg-[#D00000] text-white font-bold rounded">Simpan Berita</button>
         </div>
       </form>
 
@@ -976,7 +992,7 @@
         </div>
         <div class="flex justify-end gap-2 pt-2">
           <button type="button" onclick="closeAddDataModal()" class="px-3.5 py-1.5 bg-gray-200 dark:bg-gray-800 text-[var(--text-secondary)] rounded">Batal</button>
-          <button type="submit" class="px-4 py-1.5 bg-[#004b87] dark:bg-blue-600 hover:bg-[#003865] text-white font-bold rounded">Simpan</button>
+          <button type="submit" class="px-4 py-1.5 bg-[#9D0208] hover:bg-[#6A040F] dark:bg-[#9D0208] dark:hover:bg-[#D00000] text-white font-bold rounded">Simpan</button>
         </div>
       </form>
 
@@ -994,7 +1010,7 @@
         <!-- Content -->
       </div>
       <div class="pt-2 border-t border-[var(--border-ui)] flex items-center justify-between">
-        <button id="dossier-delete-btn" class="px-3 py-1.5 bg-red-600 hover:bg-red-700 text-white rounded text-xs font-semibold flex items-center gap-1 transition">
+        <button id="dossier-delete-btn" class="px-3 py-1.5 bg-[#9D0208] hover:bg-[#D00000] text-white rounded text-xs font-semibold flex items-center gap-1 transition">
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
           <span>Hapus Stakeholder Ini</span>
         </button>
@@ -1004,7 +1020,7 @@
   </div>
 
   <!-- Toast -->
-  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-200 bg-[#004b87] text-white text-xs px-4 py-2.5 rounded shadow-lg">
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-200 bg-[#370617] border border-[#DC2F02] text-[#fcf4f5] text-xs px-4 py-2.5 rounded-lg shadow-xl">
     <span id="toast-text">Tersimpan</span>
   </div>
 
@@ -1184,17 +1200,17 @@
         const x = Math.min(92, Math.max(8, ((s.urgency - 1) / 4) * 84 + 8 + ((idx % 3) * 2 - 2)));
         const y = Math.min(92, Math.max(8, 92 - (((s.criticality - 1) / 4) * 84 + ((idx % 4) * 2 - 2))));
 
-        let dotClass = 'bg-blue-600';
-        if (s.priority === 'P1') dotClass = 'bg-red-600';
-        else if (s.priority === 'P3') dotClass = 'bg-gray-400';
+        let dotClass = 'bg-[#E85D04]';
+        if (s.priority === 'P1') dotClass = 'bg-[#D00000]';
+        else if (s.priority === 'P3') dotClass = 'bg-[#6A040F]';
 
         return `
           <div onclick="openDossier(${s.id})" 
                title="${s.name} (Skor: ${s.score})" 
                class="absolute cursor-pointer transform -translate-x-1/2 -translate-y-1/2 group"
                style="left: ${x}%; top: ${y}%">
-            <span class="w-3 h-3 rounded-full ${dotClass} block border border-white dark:border-gray-900 transition-transform group-hover:scale-150"></span>
-            <div class="hidden group-hover:block absolute bottom-full mb-1 left-1/2 transform -translate-x-1/2 px-2 py-0.5 bg-black/90 text-white text-[10px] whitespace-nowrap rounded z-20">
+            <span class="w-3 h-3 rounded-full ${dotClass} block border border-white dark:border-[#03071E] transition-transform group-hover:scale-150"></span>
+            <div class="hidden group-hover:block absolute bottom-full mb-1 left-1/2 transform -translate-x-1/2 px-2 py-0.5 bg-[#03071E]/95 text-white text-[10px] whitespace-nowrap rounded border border-[#6A040F] z-20">
               ${s.name} (${s.priority})
             </div>
           </div>
@@ -1220,7 +1236,7 @@
               <span class="text-[var(--text-muted)] font-semibold">${pct}% Alokasi</span>
             </div>
             <div class="w-full bg-[var(--table-header)] rounded h-2 overflow-hidden border border-[var(--border-ui)]">
-              <div class="bg-[#004b87] dark:bg-blue-500 h-2 rounded" style="width: ${pct * 4.5}%"></div>
+              <div class="bg-gradient-to-r from-[#9D0208] via-[#D00000] to-[#E85D04] h-2 rounded" style="width: ${pct * 4.5}%"></div>
             </div>
           </div>
         `;
@@ -1240,7 +1256,7 @@
             <div class="text-[11px] text-[var(--text-muted)]">${c.position} — ${c.organization}</div>
           </div>
           <div class="flex items-center gap-1.5">
-            <a href="mailto:${c.email}" class="px-2 py-1 bg-[var(--bg-card)] border border-[var(--border-ui)] rounded text-[var(--text-secondary)] hover:text-[#004b87]" title="Email">Email</a>
+            <a href="mailto:${c.email}" class="px-2 py-1 bg-[var(--bg-card)] border border-[var(--border-ui)] rounded text-[var(--text-secondary)] hover:text-[#9D0208] dark:hover:text-[#E85D04]" title="Email">Email</a>
             <button onclick="copyText('${c.phone}')" class="px-2 py-1 bg-[var(--bg-card)] border border-[var(--border-ui)] rounded text-[var(--text-secondary)] hover:text-[var(--text-main)]" title="Salin Nomor">Salin</button>
           </div>
         </div>
@@ -1254,7 +1270,7 @@
         const btn = document.getElementById(`sh-btn-${k}`);
         if (btn) {
           if (k.toUpperCase() === p || (p === 'ALL' && k === 'all')) {
-            btn.className = 'px-2.5 py-1 rounded bg-blue-100 dark:bg-blue-900/60 text-blue-800 dark:text-blue-200 font-bold border border-blue-300 dark:border-blue-700';
+            btn.className = 'px-2.5 py-1 rounded bg-[#faecea] dark:bg-[#370617] text-[#9D0208] dark:text-[#E85D04] font-bold border border-[#dcb8b4] dark:border-[#6A040F]';
           } else {
             btn.className = 'px-2.5 py-1 rounded bg-[var(--table-header)] text-[var(--text-secondary)] hover:text-[var(--text-main)] border border-[var(--border-ui)]';
           }
@@ -1283,7 +1299,7 @@
           <td class="p-3 font-bold text-[var(--text-main)]">${s.name}</td>
           <td class="p-3 text-[var(--text-secondary)]">${s.category}</td>
           <td class="p-3 text-center">
-            <span class="px-2 py-0.5 rounded text-[11px] font-bold ${s.priority === 'P1' ? 'bg-red-100 text-red-800 dark:bg-red-950/60 dark:text-red-300' : 'bg-blue-100 text-blue-800 dark:bg-blue-950/60 dark:text-blue-300'}">${s.priority}</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-bold ${s.priority === 'P1' ? 'bg-[#faecea] text-[#D00000] dark:bg-[#370617] dark:text-[#FF8080]' : (s.priority === 'P2' ? 'bg-orange-50 text-[#DC2F02] dark:bg-[#370617]/60 dark:text-[#E85D04]' : 'bg-gray-100 text-[#6A040F] dark:bg-[#1a0810] dark:text-gray-300')}">${s.priority}</span>
           </td>
           <td class="p-3 text-center font-bold text-[var(--text-main)]">${s.score}</td>
           <td class="p-3 text-[var(--text-secondary)]">${s.domain || '-'}</td>
@@ -1315,7 +1331,7 @@
             <div class="flex items-start justify-between">
               <div>
                 <h3 class="text-sm font-bold text-[var(--text-main)]">${c.contact_person}</h3>
-                <div class="text-xs text-[#004b87] dark:text-sky-400 font-medium">${c.position}</div>
+                <div class="text-xs text-[#9D0208] dark:text-[#E85D04] font-medium">${c.position}</div>
               </div>
               <span class="text-[10px] text-[var(--text-muted)] px-1.5 py-0.5 bg-[var(--table-header)] rounded">#${c.id}</span>
             </div>
@@ -1331,7 +1347,7 @@
               </div>
               <div class="flex items-center justify-between">
                 <span class="text-[var(--text-muted)]">Email:</span>
-                <a href="mailto:${c.email}" class="text-[#004b87] dark:text-sky-400 hover:underline">${c.email}</a>
+                <a href="mailto:${c.email}" class="text-[#9D0208] dark:text-[#E85D04] hover:underline">${c.email}</a>
               </div>
               <div class="text-[11px] text-[var(--text-muted)] pt-1">
                 ${c.address_notes}
@@ -1341,7 +1357,7 @@
 
           <div class="pt-2.5 border-t border-[var(--border-ui)] flex items-center justify-between text-xs">
             <div class="flex items-center gap-1.5">
-              <a href="mailto:${c.email}" class="px-2.5 py-1 bg-[#004b87] dark:bg-blue-600 text-white rounded font-medium">Email</a>
+              <a href="mailto:${c.email}" class="px-2.5 py-1 bg-[#9D0208] hover:bg-[#6A040F] text-white rounded font-medium">Email</a>
               <button onclick="copyText('${c.phone}')" class="px-2 py-1 bg-[var(--table-header)] hover:bg-[var(--border-ui)] text-[var(--text-secondary)] rounded">Salin</button>
             </div>
             <button onclick="deleteContact(${c.id})" class="px-2 py-1 rounded bg-red-50 hover:bg-red-100 text-red-600 dark:bg-red-950/40 dark:hover:bg-red-900/50 dark:text-red-400 font-semibold" title="Hapus Kontak">Hapus</button>
@@ -1361,7 +1377,7 @@
             <div class="font-bold text-sm text-[var(--text-main)]">
               ${a.no}. ${a.area}
             </div>
-            <span class="px-2 py-0.5 rounded bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 font-bold">
+            <span class="px-2 py-0.5 rounded bg-[#faecea] dark:bg-[#370617] text-[#9D0208] dark:text-[#E85D04] font-bold border border-[#dcb8b4]/60 dark:border-[#6A040F]">
               R&D: ${a.prioritas_rd.split(' ')[0]}
             </span>
           </div>
@@ -1375,8 +1391,8 @@
               <div class="font-bold text-amber-800 dark:text-amber-400 mb-1">Gap / Kebutuhan 2026–2035</div>
               <p class="text-amber-900 dark:text-amber-200">${a.gap_2026_2035}</p>
             </div>
-            <div class="p-3 rounded bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-900/40">
-              <div class="font-bold text-[#004b87] dark:text-sky-400 mb-1">Usulan Penyempurnaan</div>
+            <div class="p-3 rounded bg-[#faecea]/60 dark:bg-[#370617]/30 border border-[#dcb8b4] dark:border-[#6A040F]/60">
+              <div class="font-bold text-[#9D0208] dark:text-[#E85D04] mb-1">Usulan Penyempurnaan</div>
               <p class="text-[var(--text-main)] font-medium">${a.usulan_perpres}</p>
             </div>
           </div>
@@ -1417,7 +1433,7 @@
       tbody.innerHTML = filtered.map((r, i) => `
         <tr class="hover:bg-[var(--table-row-hover)] transition">
           <td class="p-3 text-center text-[var(--text-muted)]">${i + 1}</td>
-          <td class="p-3 font-bold text-[#004b87] dark:text-sky-400">${r.stakeholder}</td>
+          <td class="p-3 font-bold text-[#9D0208] dark:text-[#E85D04]">${r.stakeholder}</td>
           <td class="p-3 font-medium text-[var(--text-main)]">${r.nomor}</td>
           <td class="p-3 font-semibold text-[var(--text-main)]">${r.judul}</td>
           <td class="p-3 text-[var(--text-secondary)] leading-relaxed">${r.substansi}</td>
@@ -1435,7 +1451,7 @@
         const btn = document.getElementById(`news-tab-${k}`);
         if (btn) {
           if (k.toUpperCase() === seg.toUpperCase() || (seg === 'ALL' && k === 'all')) {
-            btn.className = 'px-2.5 py-1 rounded bg-blue-100 dark:bg-blue-900/60 text-blue-800 dark:text-blue-200 font-bold border border-blue-300 dark:border-blue-700';
+            btn.className = 'px-2.5 py-1 rounded bg-[#faecea] dark:bg-[#370617] text-[#9D0208] dark:text-[#E85D04] font-bold border border-[#dcb8b4] dark:border-[#6A040F]';
           } else {
             btn.className = 'px-2.5 py-1 rounded bg-[var(--table-header)] text-[var(--text-secondary)] hover:text-[var(--text-main)] border border-[var(--border-ui)]';
           }
@@ -1466,7 +1482,7 @@
               <span class="px-1.5 py-0.5 rounded bg-[var(--table-header)] font-semibold">${n.segment}</span>
             </div>
             <h4 class="font-bold text-sm text-[var(--text-main)] mb-1">${n.entity}</h4>
-            <div class="text-xs text-[#004b87] dark:text-sky-400 font-medium mb-2">${n.theme}</div>
+            <div class="text-xs text-[#9D0208] dark:text-[#E85D04] font-medium mb-2">${n.theme}</div>
             <p class="text-xs text-[var(--text-secondary)] leading-relaxed">${n.summary}</p>
             ${n.strategic_notes ? `
               <div class="mt-2.5 p-2 rounded bg-[var(--table-header)] text-[11px] text-[var(--text-muted)]">
@@ -1477,7 +1493,7 @@
           <div class="pt-2 border-t border-[var(--border-ui)] flex items-center justify-between text-[11px] text-[var(--text-muted)]">
             <div class="flex items-center gap-2 truncate mr-2">
               <span class="truncate">Sumber: ${n.media || 'Press'}</span>
-              ${n.url ? `<a href="${n.url}" target="_blank" class="text-[#004b87] dark:text-sky-400 hover:underline shrink-0">Buka Tautan ↗</a>` : ''}
+              ${n.url ? `<a href="${n.url}" target="_blank" class="text-[#9D0208] dark:text-[#E85D04] hover:underline shrink-0">Buka Tautan ↗</a>` : ''}
             </div>
             <button onclick="deleteNews(${n.id})" class="text-red-600 dark:text-red-400 hover:underline font-semibold shrink-0" title="Hapus Berita">Hapus</button>
           </div>
@@ -1499,7 +1515,7 @@
       const container = document.getElementById('ai-chat-messages');
       container.innerHTML += `
         <div class="flex items-start gap-2.5 justify-end">
-          <div class="p-3 rounded-lg bg-[#004b87] dark:bg-blue-600 text-white text-xs max-w-lg">
+          <div class="p-3 rounded-lg bg-[#9D0208] text-white text-xs max-w-lg shadow-sm">
             ${text}
           </div>
         </div>
@@ -1523,7 +1539,7 @@
 
         container.innerHTML += `
           <div class="flex items-start gap-2.5">
-            <div class="w-7 h-7 rounded bg-[#004b87] text-white flex items-center justify-center font-bold text-xs shrink-0">AI</div>
+            <div class="w-7 h-7 rounded bg-[#370617] text-[#E85D04] border border-[#6A040F] flex items-center justify-center font-bold text-xs shrink-0">AI</div>
             <div class="p-3 rounded-lg bg-[var(--table-header)] border border-[var(--border-ui)] text-[var(--text-main)] max-w-xl leading-relaxed">
               ${answer}
             </div>
@@ -1558,7 +1574,7 @@
         const tabBtn = document.getElementById(`tab-add-${x}`);
         if (x === t) {
           if (form) form.classList.remove('hidden');
-          if (tabBtn) tabBtn.className = 'px-2.5 py-1 rounded font-bold bg-[#004b87] text-white';
+          if (tabBtn) tabBtn.className = 'px-2.5 py-1 rounded font-bold bg-[#9D0208] text-white';
         } else {
           if (form) form.classList.add('hidden');
           if (tabBtn) tabBtn.className = 'px-2.5 py-1 rounded text-[var(--text-secondary)] hover:text-[var(--text-main)]';
@@ -1667,7 +1683,7 @@
       document.getElementById('dossier-content').innerHTML = `
         <div class="p-2.5 rounded bg-[var(--table-header)] border border-[var(--border-ui)] flex items-center justify-between font-bold">
           <span>Skor Prioritas Tertimbang:</span>
-          <span class="text-[#004b87] dark:text-sky-400 text-sm">${s.score} / 5.0</span>
+          <span class="text-[#9D0208] dark:text-[#E85D04] text-sm">${s.score} / 5.0</span>
         </div>
         <div class="grid grid-cols-4 gap-2 text-center text-[11px] font-medium">
           <div class="p-2 bg-[var(--table-header)] rounded">Crit: ${s.criticality}</div>
@@ -1684,8 +1700,8 @@
           <div class="p-2.5 rounded bg-[var(--table-header)] text-[var(--text-secondary)]">${s.scope || s.category}</div>
         </div>
         <div>
-          <span class="font-bold text-[#004b87] dark:text-sky-400 block mb-1">Tindak Lanjut & Komitmen:</span>
-          <div class="p-2.5 rounded bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-900/40 text-[var(--text-main)]">${s.next_action || s.agenda || 'Lanjutkan pemantauan progress berkala.'}</div>
+          <span class="font-bold text-[#9D0208] dark:text-[#E85D04] block mb-1">Tindak Lanjut & Komitmen:</span>
+          <div class="p-2.5 rounded bg-[#faecea]/60 dark:bg-[#370617]/30 border border-[#dcb8b4] dark:border-[#6A040F]/60 text-[var(--text-main)]">${s.next_action || s.agenda || 'Lanjutkan pemantauan progress berkala.'}</div>
         </div>
       `;
       const delBtn = document.getElementById('dossier-delete-btn');
