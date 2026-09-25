@@ -1,3 +1,7 @@
 .DS_Store
 *.jpeg
 *.jpg
+*_backup.html
+clean_product_demo.html
+login_collapsible_preview.html
+molinas_collapsible_preview.html
